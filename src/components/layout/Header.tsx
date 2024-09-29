@@ -54,7 +54,7 @@ function Header() {
     <div className="bg-white w-full z-[999] px-4 sm:px-8 py-4 sm:py-8">
       <div className="flex justify-between items-center">
         <Link href={"/"} className="mono text-2xl text-black">
-          Fund Me
+          Scholar Connect
         </Link>
         {/* Hamburger Menu Button */}
         <button

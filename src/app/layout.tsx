@@ -11,7 +11,7 @@ const mono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Fund Me",
+  title: "Scholar Connect",
   description: "Apply Scholarships Around India",
 };
 
