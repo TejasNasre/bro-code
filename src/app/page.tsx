@@ -3,6 +3,7 @@ import { Hero } from "@/components/home/Hero";
 import { FeatureCard } from "@/components/home/FeatureCard";
 import { PolicyCard } from "@/components/shared/PolicyCard";
 import { Search, FileText, Bell } from "lucide-react";
+import scholarship from "../../data/scholarship.json";
 
 export default function Home() {
   const features = [
@@ -23,27 +24,6 @@ export default function Home() {
       description:
         "Stay updated on your application status with real-time notifications.",
       icon: <Bell className="w-10 h-10" />,
-    },
-  ];
-
-  const policies = [
-    {
-      title: "State Merit Scholarship",
-      description: "For high-achieving students from all states",
-      eligibility: "Students with 90% or above in 12th grade",
-      deadline: "August 31, 2023",
-    },
-    {
-      title: "STEM Excellence Scholarship",
-      description: "Supporting future scientists and engineers",
-      eligibility: "Students pursuing STEM fields",
-      deadline: "September 15, 2023",
-    },
-    {
-      title: "Arts and Humanities Grant",
-      description: "Fostering creativity and critical thinking",
-      eligibility: "Students in arts, literature, or humanities",
-      deadline: "October 1, 2023",
     },
   ];
 
@@ -69,7 +49,7 @@ export default function Home() {
               Featured Scholarships
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {policies.map((policy, index) => (
+              {scholarship.map((policy, index) => (
                 <PolicyCard key={index} {...policy} />
               ))}
             </div>

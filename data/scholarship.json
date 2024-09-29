@@ -1,0 +1,36 @@
+[
+    {
+      "id": 1,
+      "title": "State Merit Scholarship",
+      "description": "For high-achieving students from all states",
+      "eligibility": "Students with 90% or above in 12th grade",
+      "deadline": "August 31, 2023",
+      "amount": "Up to $5,000 per year",
+      "renewable": true,
+      "applicationProcess": "Submit transcripts, personal statement, and two recommendation letters",
+      "contact": "Email: merit-scholarship@statefunding.org | Phone: 123-456-7890"
+    },
+    {
+      "id": 2,
+      "title": "STEM Excellence Scholarship",
+      "description": "Supporting future scientists and engineers",
+      "eligibility": "Students pursuing STEM fields",
+      "deadline": "September 15, 2023",
+      "amount": "Up to $7,000 per year",
+      "renewable": false,
+      "applicationProcess": "Provide proof of enrollment in a STEM program and submit a project proposal",
+      "contact": "Email: stem-excellence@educationfunds.org | Phone: 098-765-4321"
+    },
+    {
+      "id": 3,
+      "title": "Arts and Humanities Grant",
+      "description": "Fostering creativity and critical thinking",
+      "eligibility": "Students in arts, literature, or humanities",
+      "deadline": "October 1, 2023",
+      "amount": "Up to $3,000 per semester",
+      "renewable": true,
+      "applicationProcess": "Submit a portfolio of work, an essay on creative impact, and one reference letter",
+      "contact": "Email: humanities-grant@artsscholars.com | Phone: 321-654-9870"
+    }
+  ]
+  

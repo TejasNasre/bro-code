@@ -8,8 +8,10 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface PolicyCardProps {
+  id: number;
   title: string;
   description: string;
   eligibility: string;
@@ -17,6 +19,7 @@ interface PolicyCardProps {
 }
 
 export function PolicyCard({
+  id,
   title,
   description,
   eligibility,
@@ -37,7 +40,9 @@ export function PolicyCard({
         </p>
       </CardContent>
       <CardFooter>
-        <Button>Explore More</Button>
+        <Button>
+          <Link href={`/explore-scholarship/${id}`}>Explore More</Link>
+        </Button>
       </CardFooter>
     </Card>
   );
