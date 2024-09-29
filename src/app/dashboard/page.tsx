@@ -7,17 +7,31 @@ import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
+import { KindeUser } from "@kinde-oss/kinde-auth-nextjs/types";
+
+interface User {
+  picture: string | null;
+  given_name: string | null;
+  family_name: string | null;
+  email: string | null;
+}
 
 export default function Page() {
   const router = useRouter();
   const { isAuthenticated, isLoading } = useKindeBrowserClient();
-  const [user, setUser] = useState<any | null>(null);
+  const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     userDetails()
-      .then((res: any) => {
-        setUser(res);
+      .then((res: KindeUser<Record<string, unknown>>) => {
+        const user: User = {
+          picture: res.picture,
+          given_name: res.given_name,
+          family_name: res.family_name,
+          email: res.email,
+        };
+        setUser(user);
         setLoading(false);
       })
       .catch((error) => {
@@ -42,7 +56,7 @@ export default function Page() {
             ) : user ? (
               <div className="flex flex-col justify-center items-center gap-4">
                 <Image
-                  src={user.picture}
+                  src={user.picture ?? ""}
                   alt={`${user.given_name} ${user.family_name}`}
                   width={96}
                   height={96}

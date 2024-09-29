@@ -9,9 +9,12 @@ import {
 import { userDetails } from "../../actions/userDetails";
 import Image from "next/image";
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
-
+import { KindeUser } from "@kinde-oss/kinde-auth-nextjs/types";
 interface User {
-  picture: string;
+  picture: string | null;
+  given_name: string | null;
+  family_name: string | null;
+  email: string | null;
 }
 
 function Header() {
@@ -23,11 +26,16 @@ function Header() {
 
   useEffect(() => {
     userDetails()
-      .then((res: any) => {
-        // console.log(res)
-        setUser(res);
+      .then((res:  KindeUser<Record<string, unknown>>) => {
+        const user: User = {
+          picture: res.picture || "/default-profile.jpg",
+          given_name: res.given_name,
+          family_name: res.family_name,
+          email: res.email,
+        };
+        setUser(user);
       })
-      .catch((error) => {
+      .catch(() => {
         // console.error('Error fetching user details:', error);
         setUser(null);
       });
