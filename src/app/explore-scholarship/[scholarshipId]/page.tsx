@@ -2,6 +2,7 @@
 
 import { useParams } from "next/navigation";
 import { useRouter } from "next/navigation";
+import Link from "next/link"
 
 const Page = () => {
   const router = useRouter();
@@ -19,6 +20,7 @@ const Page = () => {
       <p>Space ID: {scholarshipId}</p>
 
       {/* Example button to navigate back */}
+      <button><Link href={`/apply-scholarship/${scholarshipId}`}>Apply Now</Link></button>
       <button onClick={() => router.back()}>Go Back</button>
     </div>
   );
