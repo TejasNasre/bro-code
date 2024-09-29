@@ -1,27 +1,35 @@
-import React from 'react'
-import Link from 'next/link'
+import React from "react";
+import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="bg-gray-100 py-6">
+    <footer className="bg-white py-6">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-between">
-          <div className="w-full md:w-1/3 mb-6 md:mb-0">
+          <div className="w-full md:w-1/3 mb-6 md:mb-0 p-10">
             <h2 className="text-lg font-semibold mb-2">ScholarConnect</h2>
             <p className="text-sm text-gray-600">
               Bridging the gap between students and scholarship opportunities.
             </p>
           </div>
-          <div className="w-full md:w-1/3 mb-6 md:mb-0">
+          <div className="w-full md:w-1/3 mb-6 md:mb-0 p-10">
             <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
             <ul className="text-sm">
-              <li><Link href="/">Home</Link></li>
-              <li><Link href="/policies">Policies</Link></li>
-              <li><Link href="/track-status">Track Status</Link></li>
-              <li><Link href="/contact">Contact Us</Link></li>
+              <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li>
+                <Link href="/policies">Policies</Link>
+              </li>
+              <li>
+                <Link href="/track-status">Track Status</Link>
+              </li>
+              <li>
+                <Link href="/contact">Contact Us</Link>
+              </li>
             </ul>
           </div>
-          <div className="w-full md:w-1/3">
+          <div className="w-full md:w-1/3 p-10">
             <h3 className="text-lg font-semibold mb-2">Connect With Us</h3>
             <ul className="text-sm">
               <li>Email: info@scholarconnect.com</li>
@@ -35,5 +43,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

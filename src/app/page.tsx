@@ -51,7 +51,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-white to-gray-100">
       <main className="flex-grow">
         <Hero />
-        <section className="py-16">
+        <section className="py-36 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">
               Our Features
@@ -63,7 +63,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="py-16 bg-white">
+        <section className="py-36 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">
               Featured Scholarships

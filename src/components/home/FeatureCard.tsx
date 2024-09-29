@@ -9,7 +9,7 @@ interface FeatureCardProps {
 
 export function FeatureCard({ title, description, icon }: FeatureCardProps) {
   return (
-    <Card>
+    <Card className="bg-white">
       <CardHeader>
         <div className="mb-4">{icon}</div>
         <CardTitle>{title}</CardTitle>

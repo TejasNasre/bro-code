@@ -129,11 +129,11 @@ function Header() {
             Home
           </Link>
           <Link
-            href="/explore-events"
-            onClick={() => handleNavigation("/explore-events")}
+            href="/explore-scholarship"
+            onClick={() => handleNavigation("/explore-scholarship")}
             className="mono hover:text-gray-300"
           >
-            Explore Events
+            Explore Scholarship
           </Link>
           <Link
             href="/about"
@@ -143,8 +143,8 @@ function Header() {
             About Us
           </Link>
           <Link
-            href="/contact"
-            onClick={() => handleNavigation("/contact")}
+            href="/contact-us"
+            onClick={() => handleNavigation("/contact-us")}
             className="mono hover:text-gray-300"
           >
             Contact
