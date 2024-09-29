@@ -12,8 +12,8 @@ export function Hero() {
             </h2>
 
             <p className="hidden text-gray-500 md:mt-4 md:block">
-            "Secure Your Future with Ease!
-            Register for scholarships across states effortlessly with Scholar Connect. Apply now and unlock opportunities to fund your education—no boundaries, just possibilities!"
+            &quot;Secure Your Future with Ease!
+            Register for scholarships across states effortlessly with Scholar Connect. Apply now and unlock opportunities to fund your education—no boundaries, just possibilities!&quot;
             </p>
 
             <div className="mt-4 md:mt-8">
