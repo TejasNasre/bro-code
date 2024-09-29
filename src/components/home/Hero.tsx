@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export function Hero() {
   return (
@@ -28,8 +29,10 @@ export function Hero() {
           </div>
         </div>
 
-        <img
-          alt=""
+        <Image
+          alt="hero"
+          width={500}
+          height={500}
           src="https://images.unsplash.com/photo-1464582883107-8adf2dca8a9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
           className="h-56 w-full object-cover sm:h-full"
         />

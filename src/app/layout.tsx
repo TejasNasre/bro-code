@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import { DM_Mono } from "next/font/google";
 import Header from "@/components/layout/Header";

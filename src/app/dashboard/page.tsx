@@ -8,18 +8,10 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 
-interface User {
-  id: string;
-  given_name: string;
-  family_name: string;
-  picture: string;
-  email: string;
-}
-
 export default function Page() {
   const router = useRouter();
   const { isAuthenticated, isLoading } = useKindeBrowserClient();
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<any | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
